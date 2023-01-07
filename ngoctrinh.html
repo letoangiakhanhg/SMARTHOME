@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="ngoctrinh.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5dd209d0b0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="app" src="/image/background_bedroom.png">
+            <div class="app-body">
+                <div class="app-bodyContent">
+                    <div class="app-tabs">
+                        <span class="back"><i class="fas fa-chevron-left"></i></span>
+                        <button class="tab active"><p id="tab1">Living Room</p></button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="controls">
+                                <div class="control">
+                                    <p class="product_icon active"  >
+                                        <i class="far fa-lightbulb"></i>          
+                                    </p>
+                                    <a >Light</a>
+                                    <img id="denId_01" class="card-img-top" src="img/bulb_off.png" alt="Card image" style="width:100%">
+                                    <div class="onoff">
+                                        <button id="btnOnId_01">ON</button>
+                                        <button id="btnOffId_01">OFF</button>	
+                                    </div> 
+                                </div>
+                                <div class="control">
+                                    <p class="product_icon active">
+                                        <i class="far fa-lightbulb"></i></p>
+                                    <a>Temperature</a>
+                                    <h2><span id="nhietdo">30</span> </h2>
+                                    <div class="hinh">
+                                        <img id="tempi" class="card-img-top" src="img/fan-off.png" alt="Card image" style="width:80%">
+                                    </div>
+                                    <div class="onoff">
+                                        <button id="btnOnId_02">ON</button>
+                                        <button id="btnOffId_02">OFF</button>	
+                                    </div> 
+                                </div>
+                                <div class="control">
+                                    <p class="product_icon active"><i><img src="/image/humidity.png" alt=""></i></p>
+                                    <a>Humidity</a>
+                                    <h2><span id="doam">00</span> </h2>
+                                    <img id="humii" class="card-img-top" src="img/doam_off.png" alt="Card image" style="width:60%; "  >
+                                    <div class="onoff">
+                                        <button id="btnOnId_03">ON</button>
+                                        <button id="btnOffId_03">OFF</button>	
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+    
+    const productIcons = $$('.product_icon')
+    const controlIcons = $$('.control_icon')
+    const statusS = $$('.status')
+    
+    
+    controlIcons.forEach(function(controlIcon,index){
+        const  productIcon =  productIcons[index]
+        const status = statusS[index]
+        controlIcon.onclick = function() {
+                this.classList.toggle("active");
+                productIcon.classList.toggle("active");
+                status.classList.toggle("active")
+        };
+    })
+    
+        const backBtn = $('.back')
+
+        backBtn.onclick = function() {
+            window.history.back()
+            console.log('trở về')
+        }
+    </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+    <script type="text/javascript" src="ngoctrinh.js"></script>
+    </body>
+</html>

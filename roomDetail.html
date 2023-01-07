@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Movie Detail</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   
+    
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container detail">
+      <div class="wrapper">
+        <div class="room_main detail_main">
+          <a class="room_nav detail_back" href="/conditioner.html">
+            <i class="fa-solid fa-angle-left"></i>
+            
+          </a>
+          <div class="detail_image">
+            <img
+              src="./images/img_wall_clock.png"
+              alt="hanging_light"
+              class="image_wallClock"
+            />
+            <img
+              src="./images/img_white_hanging_light.png"
+              alt="hanging_light"
+              class="image_hangingLight"
+            />
+          </div>
+          <div class="detail_title">Muscari light</div>
+          <div class="detail_actions">
+            <div class="detail_power">
+              <div class="detail_power-title">OFF/ON</div>
+              <div class="movie_switch">
+                <input type="checkbox" id="switch" class="switch-input" />
+                <label for="switch" class="switch"></label>
+              </div>
+            </div>
+            <div class="detail_time">
+              <div class="time_item">
+                <div class="time_title">Set working Time</div>
+                <div class="time_icon">
+                  <i class="fa-regular fa-circle">
+                    <i class="fa-solid fa-plus"></i>
+                  </i>
+                </div>
+              </div>
+              <div class="time_item">
+                <div class="time_title">
+                  From <span>07:00 PM</span> to <span>11:00 PM</span>
+                </div>
+                <div class="time_icon">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detail_infor">
+            <div class="detail_infor-item">
+              <div class="detail_infor-des">Maximum Power</div>
+              <div class="detail_infor-num">50w</div>
+            </div>
+            <div class="detail_infor-item">
+              <div class="detail_infor-des">Total Working Hours</div>
+              <div class="detail_infor-num">125</div>
+            </div>
+            <div class="detail_infor-item">
+              <div class="detail_infor-des">Avg Daily Working Hrs</div>
+              <div class="detail_infor-num">25</div>
+            </div>
+          </div>
+          <div class="room_swiper detail_swiper">
+            <div class="swiper_icons">
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="swiper_ruler">
+              <div class="swiper_button">
+                <div class="swiper_button-square"></div>
+                <div class="swiper_button-triangle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+    <!-- Js -->
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="./js/ToggleSwitch.js"></script>
+   
+  </body>
+</html>

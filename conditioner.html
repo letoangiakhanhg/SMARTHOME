@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Movie Detail</title>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Roundslider -->
+    <link href="./dist/roundslider.min.css" rel="stylesheet" />
+    <script src="./dist/roundslider.min.js"></script>
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container room detail">
+      <div class="wrapper">
+        <main class="room_main">
+          <div class="room_nav">
+            <a class="room_nav_item" href="/home.html">
+            <i class="fa-solid fa-angle-left"></i>
+            Back
+          </a>
+          <a class="room_nav_item" href="/roomDetail.html">
+            Ceiling light
+            <i class="fa-solid fa-angle-right"></i> 
+          </a>
+        </div>
+          <a class="room_image" href="/roomDetail.html">
+            <img src="./images/img_air_conditioner.png" alt="room_button" />
+          </a>
+          <div class="room_title">Air conditioner</div>
+          <div class="room_control">
+            <div class="visual-clocks--dots"></div>
+            <div class="control_slider">
+              <div id="slider" class="control_button"></div>
+            </div>
+            <div class="control_temp">
+              <span class="header_unit control_temp-unit">&#8451;</span>
+            </div>
+            <div class="control_temp-current">
+              <h2 style="text-align: center; ">humidity: <span id="doam">00</span> </h2>
+              <span class="control_temp-current-unit"></span>
+            </div>
+          </div>
+          <div class="room_swiper">
+            <div class="swiper_icons">
+              <i class="fa-solid fa-fan"></i>
+              <i class="fa-solid fa-fan"></i>
+            </div>
+            <div class="swiper_ruler">
+              <div class="swiper_button">
+                <div class="swiper_button-square"></div>
+                <div class="swiper_button-triangle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="room_options">
+            <div class="option_item">
+              <div class="option_button active">
+                <i class="fa-solid fa-power-off"></i>
+              </div>
+              <div class="option_title">On - Off</div>
+            </div>
+            <div class="option_item">
+              <div class="option_button">
+                <i class="fa-solid fa-moon"></i>
+              </div>
+              <div class="option_title">Sleep</div>
+            </div>
+            <div class="option_item">
+              <div class="option_button">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="option_title">Timing</div>
+            </div>
+            <div class="option_item">
+              <div class="option_button">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="option_title">Set Up</div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+    <!-- Js -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/humid.js"></script>
+  </body>
+</html>

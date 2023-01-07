@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-family: 'Lato', 'san-serif';
+    text-rendering: optimizeLegibility;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+.app{
+    width: 375px;
+    min-width: 375px ;
+    border: 0.01px solid #b99b80;
+    height: 812px;
+    min-height: 812px;
+    border-radius: 20px;
+    background-image: url(/img/livingroom.jpg);
+    box-shadow: 0 0 50px rgba(91, 92, 83, 0.336);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.app-bodyContent{
+    flex: 1;
+    box-shadow: 0 0 15px rgba(187, 153, 153, 0.507);
+    border-radius: 20px;
+    background-color: rgba(187, 153, 153, 0.432);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-tabs{
+    margin: 15px 0 10px 0;
+    height: 50px;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.app-tabs button{
+    width: 150px;
+    font-size: 20px;
+    font-weight: 600;
+    height: 30px;
+    background-color: #b99b;
+    color: #b99b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0px 95px;
+}
+
+.app-tabs button:focus{
+    outline: none;
+    border: none;
+}
+
+.app-tabs button:hover{
+    background-color: #b99b;
+}
+.back{
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: #b99b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.tab.active{
+    background-color: #b99b;
+    color:  #ffffff;
+    outline: none;
+    border: none
+}
+
+.tab-content{
+    flex: 1;
+    width: 380px;
+    display: flex;
+}
+
+.tab-pane{
+    flex: 1;
+    display: flex;
+    display: none;
+    flex-direction:column;
+}
+
+.tab-pane.active{
+    display: block;
+}
+
+.controls{
+    width: 360px;
+    height: 815px;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.control{
+    border-radius: 20px;
+    color: rgba(255, 251, 251, 0.986);
+    margin: 0px 15px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.control:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.control > p{
+    margin: 10px 0 10px 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #b99b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.control > p i{
+    font-size: 30px;
+    /* color: #1ec1a4; */
+}
+.control > a{
+    margin: 0 0 0px 0px;
+    font-size: 22px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .control > a:hover{
+    outline: none;
+    color: rgb(252, 252, 252);
+    text-decoration: none;
+}
+
+.control span{
+    margin: 0px 0px 50px 50px;
+    font-size: 40px;
+}
+.toggle{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle p{
+    font-size: 16px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.toggle p i{
+    font-size: 30px;
+    /* color: #1ec1a4; */
+    cursor: pointer;
+}
+
+.status{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.status span{
+    margin: 3px 0 0 0;
+    font-size: 16px;
+}
+.status span:first-child{
+    display: none;
+}
+.status.active span:last-child{
+    display: none;
+}
+.status.active span:first-child{
+    display: block;
+}
+
+.product_icon.active{
+    color: rgb(255, 255, 255);
+}
+
+@keyframes animationShow {
+    from {height: 0px} to {height: 180px}
+}
+
+.conditioner{
+    width: 360px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+p i img {
+    height: 50px;
+    width: 50px;
+    color: rgb(255, 255, 255);
+}
+
+label {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    pointer-events: none;
+}
+.onbtn {
+    left: 75%;
+    top: 1%;
+    transform: translateY(-50%);
+}
+.offbtn {
+    right: 35%;
+    top: 1%;
+    transform: translateY(-50%);
+}
+.onoff{
+    display: flex;
+    justify-content: center;
+}
+#btnOnId_01  {
+    content: "";
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+}
+
+#btnOnId_02{
+    width: 70px;
+    height: 30px  ;
+    appearance: none;
+    background-color: #b99b;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+} 
+#btnOnId_03{
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    background-color: #b99b;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+}
+
+#btnOffId_03{
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    background-color: #b99b;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+}
+
+#btnOffId_02{
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    background-color: #b99b;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+}
+
+#btnOffId_01{
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    background-color: #b99b;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.925);    
+}
+
